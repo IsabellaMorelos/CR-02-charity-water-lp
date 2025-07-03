@@ -1,13 +1,13 @@
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+- Yellow:     #ffc908
+- Blue:       #003366
 
 Secondary Colors:
-- Light Blue: #8BD1CB
+- Light Blue: #78a8ba
 - Green:      #4FCB53
-- Orange:     #FF902A
+- Orange:     #bf6b45
 - Red:        #F5402C
 - Dark Green: #159A48
 - Pink:       #F16061
@@ -20,7 +20,8 @@ Fonts:
 
 /*
  Charity: Water Landing Page Styles
- This CSS incorporates all changes to match the target design image.
+ This CSS incorporates all changes to match the target design image,
+ with adjusted hero image positioning.
 */
 
 /* Reset basic browser styles */
@@ -72,24 +73,7 @@ h2 {
 .main-header .logo img.charity-water-text-logo {
     height: 25px; /* Adjust height for the text logo */
     filter: brightness(0) invert(1); /* Makes the logo white */
-    /* If using the text span alternative, remove this img style */
 }
-
-/* If using the text span alternative for logo */
-/*
-.main-header .logo .logo-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.main-header .logo .logo-text .fas {
-    color: #FFC907;
-}
-*/
-
 
 .main-nav ul {
     list-style: none;
@@ -113,7 +97,7 @@ h2 {
 }
 
 .main-nav ul li a:hover {
-    color: #FFC907; /* Yellow on hover */
+    color: #ffc908; /* Yellow on hover */
 }
 
 .main-nav .dropdown .dropdown-menu {
@@ -164,7 +148,7 @@ h2 {
 }
 
 .header-actions .give-button {
-    background-color: #FFC907; /* Yellow */
+    background-color: #ffc908; /* Yellow */
     color: #222; /* Dark text for contrast */
     padding: 8px 15px;
     border-radius: 5px;
@@ -186,7 +170,7 @@ h2 {
 .hero {
     position: relative; /* Needed for positioning content on top */
     min-height: 550px; /* Set a height for the hero section */
-    color: #FFC907; /* Yellow text for main headlines */
+    color: #ffc908; /* Yellow text for main headlines */
     padding: 0; /* Remove default section padding */
     border-radius: 0 0 16px 16px; /* Only round bottom corners */
     box-shadow: none; /* Remove section shadow */
@@ -195,7 +179,7 @@ h2 {
     /* The background image now applies to the whole .hero section */
     background-image: url('https://cdn2.dropmarkusercontent.com/52043/9b8376ae240f679505acec872a3ecf015cc4406a3dd6872395f51525d1362947/4750_Ethiopia_2019_CG-.jpg?Expires=1751586978&Signature=KIC4iZRBXg84nlqPuTAwo7x71c7AXwXIuEu1TtUYTsrDeYHgyIoyolIXJpUecwS8~NR3pNWx~7FFWTs7YnCJ-qMC4wAy3ginYO~bLL76naY1YuCxtiAVAhUvJBqzSr0lROeL6vaI4qZay29Nmng9VMtpdajFPZ0Y5nKLgb-8SNiYF5rb0TBuFk8vg0mz3m7yTwJ85c98~tEAAK9voBPa4EPvLnjbGzzc0ChrE6GiR2r7fOTOaiQ949o9V7K1ByvH~SAe7X-J4k1TDH1cj-A3zKpDMhsWTKMtecs9kwf~Wm-DcDpv3Jx3zlMv~PUQPkD-CTDB7HLHlHOuaHX0SwayrA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
     background-size: cover;      /* Make the image cover the whole area */
-    background-position: 30% center; /* Adjusted to shift focus left and match cropping */
+    background-position: 20% center; /* Adjusted to shift focus further left */
     background-repeat: no-repeat;/* Do not repeat the image */
 }
 
@@ -267,7 +251,7 @@ h2 {
 }
 
 .progress-bar-fill {
-    background-color: #F5402C; /* Changed to Red for progress bar fill */
+    background-color: #bf6b45; /* Red for progress bar fill */
     height: 100%;
     border-radius: 5px;
     width: 0;
@@ -452,4 +436,4 @@ h2 {
         width: 45%;
         margin-right: 80px;
     }
-}
+  }
