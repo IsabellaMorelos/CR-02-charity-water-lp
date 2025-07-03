@@ -5,33 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="https://www.charitywater.org/assets/images/logo-black.svg" alt="Charity Water Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Take Action <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Start a Campaign</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Financials</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Why Water? <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">The Problem</a></li>
+                        <li><a href="#">The Solution</a></li>
+                        <li><a href="#">Impact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="sign-in">Sign In</a>
+            <a href="#" class="give-button"><i class="fas fa-heart"></i> Give</a>
+        </div>
+    </header>
+
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Essential Water.</h1>
-        <h1>Real Change.</h1>
-        <!-- Subheadline -->
-        <p>Your generosity provides the essential gift of clean water, transforming hardship into vibrant futures and unlocking true potential in every community you touch</p>
+        <div class="hero-background-image">
+            </div>
+        <div class="hero-content">
+            <h1>Essential Water.</h1>
+            <h1>Real Change.</h1>
+            <p>Your generosity provides the essential gift of clean water, transforming hardship into vibrant futures and unlocking true potential in every community you touch.</p>
+
+            <div class="take-action-prompt">
+                <h3>Ready to Take Action?</h3>
+                <p>It takes about $10,000 to fund one clean water project</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 31%;"></div>
+                    <div class="progress-text">
+                        <span>$3,134.36 Raised for Project 22/22</span>
+                        <span>$6,865.64 To Go</span>
+                    </div>
+                </div>
+                <a href="#" class="donate-button hero-donate-button">Give Clean Water Now</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Real-World Impact Story Section -->
     <section class="impact-story">
-        <!-- Section headline -->
         <h2>A Village Transformed: Zimbabwe</h2>
-        <!-- Container for image and text -->
         <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://cdn2.dropmarkusercontent.com/52043/d8f8d8958b074dd4ef648b59d620b759b8123154f5940a31c050139327465ec7/Zimbabwe_2022_CG-9822.jpg?Expires=1751586385&Signature=MM2zL9i7yezFo3ftiYDgh8sAT03lf7olvUa3l5~l0Erzd~aZJmpRxflcbHyECxNHtWOP1V4zeq1FlImnR8uMuxlpRyigqosBklZoFapH78wduCiSJPjKwzLKHFsIcrw97vJKkyLax~U6g6Quo92ajgCDSEyuyo~XXCtSoebc1trcGJ4sgWBGzE-1hJIQDX7y-dOGyBsgRQsk5C2s0qFAiCXQ1F3Yp6SgZOjkjfiykHp0yz01M0np0u~TMff~3AC0IQNiooZL9Ud7YRjci0~dek0gr2Cyml0PV7rEwI~m7hll-QCBs0N1hYIEcTX92oQrgA-IuBw60OyBhIgHHQH0wA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Zimbabwe Village Celebrating Clean Water" class="impact-image">
-            <!-- Impact story text -->
+            <img src="https://cdn2.dropmarkusercontent.com/52043/d8f8d8958b074dd4ef648b59d620b759b8123154f5940a31c050139327465ec7/Zimbabwe_2022_CG-9822.jpg?Expires=1751586385&Signature=MM2zL9i7yezFo3ftiYDgh8sAT03lf7olvUa3l5~l0Erzd~aZJmpRxflcbHyECxNHrWOP1V4zeq1FlImnR8uMuxlpRyigqosBklZoFapH78wduCiSJPjKwzLKHFsIcrw97vJKkyLax~U6g6QuO92ajgCDSE3uyo~XXCtSoebc1trcGJ4sgWBGzE-1hJIQDX7y-dOGyBsgRQsk5C2s0qFAiCXQ1F3Yp6SgZOjkjfiykHp0yz01M0np0u~TMff~3AC0IQNiooZL9Ud7YRjci0~dek0gr2Cyml0PV7rEwI~m7hll-QCBs0N1hYIEcTX92oQrgA-IuBw60OyBhIgHHQH0wA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Zimbabwe Village Celebrating Clean Water" class="impact-image">
             <p>
                 For generations, the families of this Zimbabwean village carried the heavy burden of searching for clean water, limiting their health and opportunities. Thanks to your support, a new, reliable water point has transformed their lives, bringing incredible health, newfound hope, and a vibrant future for everyone.
             </p>
         </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
     <section class="call-to-action">
         <h2>Make a Difference</h2>
         <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
