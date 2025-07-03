@@ -1,63 +1,95 @@
 /* charity: water Brand Colors & Fonts
-... (keep existing brand colors and fonts)
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+Fonts:
+- Proxima Nova
+- Avenir
+
 */
 
-/* Reset basic browser styles
-... (keep existing global styles)
+/*
+ Charity: Water Landing Page Styles
+ This CSS incorporates all changes to match the target design image.
 */
+
+/* Reset basic browser styles */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f4f8fb;
+    background-color: #f4f8fb; /* Soft light blue for a fresh look */
     font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #222;
+    color: #222; /* Default dark text color */
     line-height: 1.6;
 }
 
-/* General Section Styles
-... (keep existing section styles)
-*/
+/* General Section Styles */
 section {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
-    margin: 24px 10px;
+    background: #fff; /* White background for sections */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
+    margin: 24px 10px; /* Space between sections */
     padding: 24px 16px;
-    overflow: hidden;
+    overflow: hidden; /* Clear floats/contain absolute elements */
 }
 
 h2 {
-    color: #2E9DF7;
+    color: #2E9DF7; /* Primary blue for section headings */
     margin-top: 0;
     font-weight: bold;
     text-align: center;
     margin-bottom: 24px;
 }
 
-/* Header/Navigation Styles
-... (keep existing header/nav styles as provided in the last full CSS)
-*/
+/* Header/Navigation Styles */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #2E9DF7;
-    color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
+    background-color: rgba(0, 0, 0, 0.4); /* Translucent dark background for header */
+    color: #fff; /* White text for contrast */
+    box-shadow: none; /* No distinct shadow on header in target image */
+    position: sticky; /* Make it stick to the top */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
-.main-header .logo img {
-    height: 40px;
-    filter: brightness(0) invert(1);
+.main-header .logo img.charity-water-text-logo {
+    height: 25px; /* Adjust height for the text logo */
+    filter: brightness(0) invert(1); /* Makes the logo white */
+    /* If using the text span alternative, remove this img style */
 }
+
+/* If using the text span alternative for logo */
+/*
+.main-header .logo .logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.main-header .logo .logo-text .fas {
+    color: #FFC907;
+}
+*/
+
 
 .main-nav ul {
     list-style: none;
@@ -72,7 +104,7 @@ h2 {
 }
 
 .main-nav ul li a {
-    color: #fff;
+    color: #fff; /* White color for navigation links */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 0;
@@ -81,28 +113,28 @@ h2 {
 }
 
 .main-nav ul li a:hover {
-    color: #FFC907;
+    color: #FFC907; /* Yellow on hover */
 }
 
 .main-nav .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #fff; /* White background for dropdown menu itself */
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
     border-radius: 5px;
     padding: 10px 0;
     left: 0;
-    top: 100%;
+    top: 100%; /* Position below the parent link */
 }
 
 .main-nav .dropdown:hover .dropdown-menu {
-    display: block;
+    display: block; /* Show dropdown on hover */
 }
 
 .main-nav .dropdown-menu li a {
-    color: #222;
+    color: #222; /* Dark text for dropdown items */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -117,11 +149,11 @@ h2 {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* Space between Sign In and Give button */
 }
 
 .header-actions .sign-in {
-    color: #fff;
+    color: #fff; /* White color for Sign In link */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -132,8 +164,8 @@ h2 {
 }
 
 .header-actions .give-button {
-    background-color: #FFC907;
-    color: #222;
+    background-color: #FFC907; /* Yellow */
+    color: #222; /* Dark text for contrast */
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -145,16 +177,16 @@ h2 {
 }
 
 .header-actions .give-button:hover {
-    background-color: #FF902A;
+    background-color: #FF902A; /* Orange */
     transform: translateY(-1px);
 }
 
 
-/* Hero Section Styles (Revised for 100% width background image) */
+/* Hero Section Styles */
 .hero {
     position: relative; /* Needed for positioning content on top */
     min-height: 550px; /* Set a height for the hero section */
-    color: #FFC907; /* Yellow text for contrast */
+    color: #FFC907; /* Yellow text for main headlines */
     padding: 0; /* Remove default section padding */
     border-radius: 0 0 16px 16px; /* Only round bottom corners */
     box-shadow: none; /* Remove section shadow */
@@ -163,13 +195,8 @@ h2 {
     /* The background image now applies to the whole .hero section */
     background-image: url('https://cdn2.dropmarkusercontent.com/52043/9b8376ae240f679505acec872a3ecf015cc4406a3dd6872395f51525d1362947/4750_Ethiopia_2019_CG-.jpg?Expires=1751586978&Signature=KIC4iZRBXg84nlqPuTAwo7x71c7AXwXIuEu1TtUYTsrDeYHgyIoyolIXJpUecwS8~NR3pNWx~7FFWTs7YnCJ-qMC4wAy3ginYO~bLL76naY1YuCxtiAVAhUvJBqzSr0lROeL6vaI4qZay29Nmng9VMtpdajFPZ0Y5nKLgb-8SNiYF5rb0TBuFk8vg0mz3m7yTwJ85c98~tEAAK9voBPa4EPvLnjbGzzc0ChrE6GiR2r7fOTOaiQ949o9V7K1ByvH~SAe7X-J4k1TDH1cj-A3zKpDMhsWTKMtecs9kwf~Wm-DcDpv3Jx3zlMv~PUQPkD-CTDB7HLHlHOuaHX0SwayrA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
     background-size: cover;      /* Make the image cover the whole area */
-    background-position: center; /* Center the image */
+    background-position: 30% center; /* Adjusted to shift focus left and match cropping */
     background-repeat: no-repeat;/* Do not repeat the image */
-
-    /* Add a dark blue overlay for better text readability and branding */
-    /* This creates a gradient from top-left (more opaque blue) to bottom-right (more transparent) */
-    background-blend-mode: multiply; /* Blends the color with the image */
-    background-color: rgba(46, 157, 247, 0.7); /* Blue overlay color */
 }
 
 .hero-content {
@@ -181,10 +208,13 @@ h2 {
     width: 50%; /* Occupy the right half of the hero */
     padding: 40px;
     text-align: right; /* Align text to the right */
-    
-    /* Ensure content is readable over the image, if needed, add background */
-    /* background-color: rgba(46, 157, 247, 0.3); */ /* Optional: slight background for text area */
-    /* border-radius: 0 0 16px 0; */ /* Only if a background is added */
+
+    /* Translucent dark background for the content box as seen in target image */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin-right: 5%;
 }
 
 .hero h1 {
@@ -199,18 +229,19 @@ h2 {
 .hero p {
     font-size: 1.1em;
     margin-top: 0;
-    max-width: 90%; /* Constrain width for better readability */
-    margin-left: auto; /* Push text to the right */
+    max-width: 90%;
+    margin-left: auto;
     text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .take-action-prompt {
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.15);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    margin-left: auto; /* Center the box within the right content area */
+    margin-left: auto;
     max-width: 400px;
 }
 
@@ -236,7 +267,7 @@ h2 {
 }
 
 .progress-bar-fill {
-    background-color: #4FCB53;
+    background-color: #F5402C; /* Changed to Red for progress bar fill */
     height: 100%;
     border-radius: 5px;
     width: 0;
@@ -269,9 +300,7 @@ h2 {
 }
 
 
-/* Real-World Impact Story Section
-... (keep existing impact story styles)
-*/
+/* Real-World Impact Story Section */
 .impact-story {
     text-align: center;
 }
@@ -300,12 +329,10 @@ h2 {
     min-width: 280px;
 }
 
-/* Donate Button Styles (General for other sections)
-... (keep existing donate button styles)
-*/
+/* Donate Button Styles (General) */
 .donate-button {
     display: inline-block;
-    background-color: #4FCB53;
+    background-color: #4FCB53; /* Green */
     color: #fff;
     padding: 14px 32px;
     text-decoration: none;
@@ -320,19 +347,18 @@ h2 {
 }
 
 .donate-button:hover {
-    background-color: #159A48;
+    background-color: #159A48; /* Dark Green */
     transform: translateY(-2px) scale(1.04);
 }
 
 
-/* Media Queries for Responsive Design (Revised for new hero layout) */
+/* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {
-    /* Header (no change from previous mobile styles) */
+    /* Header */
     .main-header {
         flex-direction: column;
         padding: 10px;
-        text-align: center;
     }
     .main-header .logo { margin-bottom: 10px; }
     .main-nav ul { flex-direction: column; width: 100%; }
@@ -348,22 +374,23 @@ h2 {
     .main-nav .dropdown-menu li a { padding: 8px 20px; }
     .header-actions { margin-top: 10px; justify-content: center; width: 100%; }
 
-    /* Hero Section Mobile (Revised for 100% width background image) */
+    /* Hero Section Mobile */
     .hero {
-        min-height: 450px; /* Adjust height for mobile */
-        padding: 20px; /* Add some padding back */
-        background-position: 70% center; /* Adjust to show person better on mobile */
+        min-height: 500px;
+        padding: 0;
+        background-position: 70% center; /* Keep this for mobile to adjust focus */
     }
 
     .hero-content {
-        position: static; /* Remove absolute positioning on mobile */
-        transform: none; /* Remove transform on mobile */
-        width: 100%; /* Take full width */
-        padding: 20px; /* Adjust padding */
-        text-align: center; /* Center text on small screens */
-        background-color: rgba(46, 157, 247, 0.6); /* Add a more solid background for readability */
-        border-radius: 12px; /* Add some rounding */
-        margin-top: 20px; /* Space from top */
+        position: static;
+        transform: none;
+        width: 90%;
+        padding: 25px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .hero h1 {
@@ -372,9 +399,7 @@ h2 {
 
     .hero p {
         font-size: 1em;
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 100%;
     }
 
     .take-action-prompt {
@@ -383,7 +408,7 @@ h2 {
         margin-right: 0;
     }
 
-    /* Impact Story Mobile (no change) */
+    /* Impact Story Mobile */
     .impact-content {
         flex-direction: column;
         text-align: center;
@@ -395,21 +420,20 @@ h2 {
     }
 }
 
-/* Tablet and larger screens (Revised for new hero layout) */
+/* Tablet and larger screens */
 @media (min-width: 769px) {
     .main-header {
         padding: 20px 40px;
     }
 
     .hero {
-        margin: 0; /* No horizontal margin, extends full width */
-        border-radius: 0 0 16px 16px; /* Keep bottom corners rounded */
-        box-shadow: none; /* Hero itself doesn't need shadow */
+        margin: 0;
+        border-radius: 0 0 16px 16px;
+        box-shadow: none;
     }
 
     .hero-content {
         /* These properties from above will apply for desktop */
-        /* position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 50%; */
     }
 }
 
@@ -423,5 +447,9 @@ h2 {
     }
     .hero p {
         font-size: 1.2em;
+    }
+    .hero-content {
+        width: 45%;
+        margin-right: 80px;
     }
 }
