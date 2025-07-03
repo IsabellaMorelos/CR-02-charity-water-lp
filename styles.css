@@ -300,16 +300,6 @@ h2 {
     min-width: 280px;
 }
 
-/* Call-to-Action Section Styles
-... (keep existing call-to-action styles)
-*/
-.call-to-action {
-    background-color: #FFC907;
-    color: #222;
-    text-align: center;
-    padding: 30px 20px;
-}
-
 /* Donate Button Styles (General for other sections)
 ... (keep existing donate button styles)
 */
