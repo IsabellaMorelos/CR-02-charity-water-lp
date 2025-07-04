@@ -1,8 +1,8 @@
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
-- Yellow:     #ffc908
-- Blue:       #003366
+- Yellow:      #ffc908
+- Blue:        #003366
 
 Secondary Colors:
 - Light Blue: #78a8ba
@@ -37,15 +37,21 @@ body {
     color: #222; /* Default dark text color */
     line-height: 1.6;
 
-    /* Set the background image for the whole page */
-    background-image: url('img/Background.jpg'); /* Use your image path */
+    /* MODIFIED: Add the gradient to the body's background-image property */
+    background-image:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0) 50%,     /* Starts fully transparent at 50% of the width */
+            rgba(0, 0, 0, 0.7) 100%   /* Becomes 70% opaque black at the far right */
+        ),
+        url('img/Background.jpg'); /* Your existing background image for the body */
+
     background-size: cover;      /* Make the image cover the whole area */
     background-repeat: no-repeat;/* Do not repeat the image */
     background-position: center; /* Center the image */
 }
 
 h2 {
-    color: #2E9DF7; /* Primary blue for section headings */
+    color: #003366; /* Primary blue for section headings */
     margin-top: 0;
     font-weight: bold;
     text-align: center;
@@ -58,18 +64,32 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: transparent; /* Header is now see-through */
-    color: #fff; /* White text for contrast */
-    box-shadow: none; /* No distinct shadow on header in target image */
-    position: sticky; /* Make it stick to the top */
+    /* MODIFIED BACK: Add the transparent black background for the header */
+    background-color: rgba(0, 0, 0, 0.4); /* Re-added transparent black */
+    color: #fff; /* White text for contrast (already present, but good to confirm) */
+    box-shadow: none; /* No distinct shadow on header */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
+}
+
+/* Ensure dropdown menus still have a solid background */
+.main-nav .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Keep solid white background for dropdown menus */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1; /* Make sure dropdown is above the header */
+    border-radius: 5px;
+    padding: 10px 0;
+    left: 0;
+    top: 100%;
 }
 
 /* Logo styles for charity: water header */
-/* Use logo.png from the img folder */ /* This is a comment, not code */
 .main-header .logo img {
-    height: 32px; /* This sets the height of the image specified in HTML */
+    height: 32px;
 }
 
 .main-nav ul {
@@ -88,27 +108,14 @@ h2 {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em; /* Make the text slightly bigger */
-    padding: 12px 18px; /* Increase vertical and horizontal padding */
+    font-size: 1.1em;
+    padding: 12px 18px;
     display: block;
     transition: color 0.3s ease;
 }
 
 .main-nav ul li a:hover {
     color: #ffc908; /* Yellow on hover */
-}
-
-.main-nav .dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff; /* White background for dropdown menu itself */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-    padding: 10px 0;
-    left: 0;
-    top: 100%; /* Position below the parent link */
 }
 
 .main-nav .dropdown:hover .dropdown-menu {
@@ -131,11 +138,11 @@ h2 {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between Sign In and Give button */
+    gap: 20px;
 }
 
 .header-actions .sign-in {
-    color: #fff; /* White color for Sign In link */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -146,8 +153,8 @@ h2 {
 }
 
 .header-actions .give-button {
-    background-color: #ffc908; /* Yellow */
-    color: #222; /* Dark text for contrast */
+    background-color: #ffc908;
+    color: #222;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -159,49 +166,45 @@ h2 {
 }
 
 .header-actions .give-button:hover {
-    background-color: #78a8ba; /* Blue */
+    background-color: #78a8ba;
     transform: translateY(-1px);
 }
 
-
 /* Hero Section Styles */
-/* The hero section will stretch to the top of the page */
 .hero {
-  position: relative; /* Needed for positioning content on top */
-  min-height: 550px; /* Set a height for the hero section */
-  color: #ffc908; /* Yellow text for main headlines */
-  padding: 0; /* Remove default section padding */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-  box-shadow: none; /* Remove section shadow */
-  margin: 0; /* Remove section margin */
+    position: relative;
+    min-height: 550px;
+    color: #ffc908;
+    padding: 0;
+    border-radius: 0 0 16px 16px;
+    box-shadow: none;
+    margin: 0;
+    padding-top: 62px;
+    z-index: 1;
 
-
-  /* Make sure the hero section appears under the header */
-  /* Add top padding equal to the header's height */
-  padding-top: 62px; /* Header is about 62px tall (32px logo + padding) */
-  z-index: 1;
+    /* REMOVED: Gradient is now on the body */
+    background-image: none; /* Ensure no residual background if any */
 }
 
 .hero-content {
-    /* Position the content within the hero section */
     position: absolute;
-    top: 50%; /* Start from 50% down */
-    right: 0; /* Align to the right edge */
-    transform: translateY(-50%); /* Move up by half its height to truly center vertically */
-    width: 50%; /* Occupy the right half of the hero */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50%;
     padding: 40px;
-    text-align: right; /* Align text to the right */
+    text-align: center;
 
-    /* Remove or comment out the background color and box shadow */
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
-    border-radius: 8px;
+    background-color: transparent; /* Keep transparent */
+    box-shadow: none; /* Keep no shadow */
+    border-radius: 0; /* Keep no border-radius */
+
     max-width: 600px;
-    margin-right: 5%;
-
-    /* Add a text shadow to help text stand out on the image */
+    /* MODIFIED: Reduced margin-right even further to shift the box more to the right */
+    margin-right: 0%; /* Changed from 2% to 0%. This will align it directly to the right edge. */
     text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
 
 .hero h1 {
     font-size: 2.8em;
@@ -215,8 +218,8 @@ h2 {
 .hero p {
     font-size: 1.1em;
     margin-top: 0;
-    max-width: 90%;
-    margin-left: auto;
+    max-width: 450px;
+    margin: 0 auto 15px auto;
     text-shadow: 0 1px 4px rgba(0,0,0,0.12);
     color: rgba(255, 255, 255, 0.9);
 }
@@ -227,8 +230,8 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    margin-left: auto;
     max-width: 400px;
+    margin: 20px auto 0 auto;
 }
 
 .take-action-prompt h3 {
@@ -285,28 +288,14 @@ h2 {
     transform: translateY(-2px);
 }
 
-
 /* Real-World Impact Story Section */
 .impact-story {
     text-align: center;
-    margin-top: 60px; /* Increased margin-top to create more space */
-    background-color: #ffffff; /* White background for the section */
-    padding: 40px 20px; /* Add padding inside the white box */
-    border-radius: 0; /* Remove border-radius to have sharp corners */
-    box-shadow: none; /* Remove box-shadow */
-    /* Removed: max-width, margin-left: auto, margin-right: auto */
-}
-
-/* Also, ensure that the inner content within impact-content doesn't stretch too wide */
-.impact-content {
-    max-width: 960px; /* Keep content within a readable width */
-    margin: 0 auto; /* Center the content within the full-width white box */
-    display: flex; /* Keep flex properties for layout */
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    text-align: left;
-    flex-wrap: wrap;
+    margin-top: 60px;
+    background-color: rgba(255, 250, 240, 0.7);
+    padding: 40px 20px;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .impact-content {
@@ -315,28 +304,29 @@ h2 {
     justify-content: center;
     gap: 28px;
     text-align: left;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
 .impact-image {
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(46, 157, 247, 0.15);
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 .impact-content p {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
 }
 
 /* Donate Button Styles (General) */
 .donate-button {
     display: inline-block;
-  background-color: #ffc908; /* Yellow */
+    background-color: #ffc908;
     color: #fff;
     padding: 14px 32px;
     text-decoration: none;
@@ -351,18 +341,18 @@ h2 {
 }
 
 .donate-button:hover {
-    background-color: #78a8ba; /* Blue */
+    background-color: #78a8ba;
     transform: translateY(-2px) scale(1.04);
 }
 
-
 /* Media Queries for Responsive Design */
-
 @media (max-width: 768px) {
     /* Header */
     .main-header {
         flex-direction: column;
         padding: 10px;
+        /* MODIFIED BACK FOR MOBILE: Add transparent black background for mobile header */
+        background-color: rgba(0, 0, 0, 0.4);
     }
     .main-header .logo { margin-bottom: 10px; }
     .main-nav ul { flex-direction: column; width: 100%; }
@@ -382,7 +372,11 @@ h2 {
     .hero {
         min-height: 500px;
         padding: 0;
-        background-position: 70% center; /* Keep this for mobile to adjust focus */
+        /* Background position for mobile is now handled by body's background-position */
+        /* background-position: 70% center; */
+
+        /* Ensure no residual background from previous attempts */
+        background-image: none;
     }
 
     .hero-content {
@@ -391,7 +385,7 @@ h2 {
         width: 90%;
         padding: 25px;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5); /* Re-add a background for mobile readability */
         border-radius: 8px;
         margin: 20px auto;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -435,8 +429,6 @@ h2 {
         border-radius: 0 0 16px 16px;
         box-shadow: none;
     }
-
-    /* The .hero-content styles for desktop are already defined above, so no need for an empty ruleset here. */
 }
 
 /* Specific adjustments for very large desktops */
@@ -450,8 +442,8 @@ h2 {
     .hero p {
         font-size: 1.2em;
     }
-        .hero-content {
-            width: 45%;
-            margin-right: 80px;
-        }
+    .hero-content {
+        width: 45%;
+        margin-right: 80px;
     }
+}
