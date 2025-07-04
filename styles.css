@@ -36,17 +36,14 @@ body {
     padding: 0;
     color: #222; /* Default dark text color */
     line-height: 1.6;
-}
 
-/* General Section Styles */
-section {
-    background: #fff; /* White background for sections */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-    margin: 24px 10px; /* Space between sections */
-    padding: 24px 16px;
-    overflow: hidden; /* Clear floats/contain absolute elements */
-}
+    /* Set the background image for the whole page */
+    background-image: url('img/Background.jpg'); /* Use your image path */
+    background-size: cover;      /* Make the image cover the whole area */
+    background-repeat: no-repeat;/* Do not repeat the image */
+    background-position: center; /* Center the image */
+
+
 
 h2 {
     color: #2E9DF7; /* Primary blue for section headings */
@@ -70,9 +67,10 @@ h2 {
     z-index: 1000; /* Ensure it's above other content */
 }
 
-.main-header .logo img.charity-water-text-logo {
-    height: 25px; /* Adjust height for the text logo */
-    filter: brightness(0) invert(1); /* Makes the logo white */
+/* Logo styles for charity: water header */
+/* Use logo.png from the img folder */ /* This is a comment, not code */
+.main-header .logo img {
+    height: 32px; /* This sets the height of the image specified in HTML */
 }
 
 .main-nav ul {
@@ -88,10 +86,11 @@ h2 {
 }
 
 .main-nav ul li a {
-    color: #fff; /* White color for navigation links */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 0;
+    font-size: 1.1em; /* Make the text slightly bigger */
+    padding: 12px 18px; /* Increase vertical and horizontal padding */
     display: block;
     transition: color 0.3s ease;
 }
@@ -161,26 +160,27 @@ h2 {
 }
 
 .header-actions .give-button:hover {
-    background-color: #FF902A; /* Orange */
+    background-color: #78a8ba; /* Blue */
     transform: translateY(-1px);
 }
 
 
 /* Hero Section Styles */
+/* The hero section will stretch to the top of the page */
 .hero {
-    position: relative; /* Needed for positioning content on top */
-    min-height: 550px; /* Set a height for the hero section */
-    color: #ffc908; /* Yellow text for main headlines */
-    padding: 0; /* Remove default section padding */
-    border-radius: 0 0 16px 16px; /* Only round bottom corners */
-    box-shadow: none; /* Remove section shadow */
-    margin: 0; /* Remove section margin */
+  position: relative; /* Needed for positioning content on top */
+  min-height: 550px; /* Set a height for the hero section */
+  color: #ffc908; /* Yellow text for main headlines */
+  padding: 0; /* Remove default section padding */
+  border-radius: 0 0 16px 16px; /* Only round bottom corners */
+  box-shadow: none; /* Remove section shadow */
+  margin: 0; /* Remove section margin */
 
-    /* The background image now applies to the whole .hero section */
-    background-image: url('https://cdn2.dropmarkusercontent.com/52043/9b8376ae240f679505acec872a3ecf015cc4406a3dd6872395f51525d1362947/4750_Ethiopia_2019_CG-.jpg?Expires=1751586978&Signature=KIC4iZRBXg84nlqPuTAwo7x71c7AXwXIuEu1TtUYTsrDeYHgyIoyolIXJpUecwS8~NR3pNWx~7FFWTs7YnCJ-qMC4wAy3ginYO~bLL76naY1YuCxtiAVAhUvJBqzSr0lROeL6vaI4qZay29Nmng9VMtpdajFPZ0Y5nKLgb-8SNiYF5rb0TBuFk8vg0mz3m7yTwJ85c98~tEAAK9voBPa4EPvLnjbGzzc0ChrE6GiR2r7fOTOaiQ949o9V7K1ByvH~SAe7X-J4k1TDH1cj-A3zKpDMhsWTKMtecs9kwf~Wm-DcDpv3Jx3zlMv~PUQPkD-CTDB7HLHlHOuaHX0SwayrA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
-    background-size: cover;      /* Make the image cover the whole area */
-    background-position: 20% center; /* Adjusted to shift focus further left */
-    background-repeat: no-repeat;/* Do not repeat the image */
+
+  /* Make sure the hero section appears under the header */
+  /* Add top padding equal to the header's height */
+  padding-top: 62px; /* Header is about 62px tall (32px logo + padding) */
+  z-index: 1;
 }
 
 .hero-content {
@@ -316,7 +316,7 @@ h2 {
 /* Donate Button Styles (General) */
 .donate-button {
     display: inline-block;
-    background-color: #4FCB53; /* Green */
+  background-color: #ffc908; /* Yellow */
     color: #fff;
     padding: 14px 32px;
     text-decoration: none;
@@ -331,7 +331,7 @@ h2 {
 }
 
 .donate-button:hover {
-    background-color: #159A48; /* Dark Green */
+    background-color: #78a8ba; /* Blue */
     transform: translateY(-2px) scale(1.04);
 }
 
